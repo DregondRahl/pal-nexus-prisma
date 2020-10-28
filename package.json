@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
-  "description": "pal",
+  "description": "pal-nexus",
   "scripts": {
     "start": "node dist/server",
     "clean": "rm -rf dist",
@@ -18,24 +18,24 @@
   },
   "dependencies": {
     "@nexus/schema": "0.16.0",
-    "@prisma/client": "2.9.0",
-    "@paljs/nexus": "2.4.0",
+    "@prisma/client": "2.10.0",
+    "@paljs/nexus": "2.5.2",
     "apollo-server": "2.18.2",
-    "graphql": "15.3.0"
+    "graphql": "15.4.0"
   },
   "devDependencies": {
-    "@prisma/cli": "2.9.0",
-    "@types/node": "14.11.10",
+    "@prisma/cli": "2.10.0",
+    "@types/node": "14.14.5",
     "prettier": "2.1.2",
     "ts-node": "8.10.2",
     "ts-node-dev": "1.0.0",
-    "typescript": "4.0.3"
+    "typescript": "4.0.5"
   },
   "prettier": {
     "singleQuote": true,
     "semi": false,
     "trailingComma": "all"
   },
-  "repository": "dre",
-  "author": "dre"
+  "repository": "pal-nexus",
+  "author": "Dre"
 }

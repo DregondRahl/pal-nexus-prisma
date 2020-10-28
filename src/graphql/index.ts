@@ -1,1 +1,2 @@
-export const testType = {}
+export * from './Post'
+export * from './User'

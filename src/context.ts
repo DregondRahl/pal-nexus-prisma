@@ -1,5 +1,6 @@
 import { PrismaClient, PrismaClientOptions } from '@prisma/client'
 import { PrismaDelete, onDeleteArgs } from '@paljs/plugins'
+import { PubSub } from 'apollo-server'
 
 class Prisma extends PrismaClient {
   constructor(options?: PrismaClientOptions) {
@@ -12,16 +13,22 @@ class Prisma extends PrismaClient {
   }
 }
 
-const prisma = new Prisma()
+const prisma = new Prisma({
+  log: ['query'],
+})
+
+const pubsub = new PubSub()
 
 export interface Context {
   prisma: Prisma
   select: any
+  pubsub: PubSub
 }
 
 export function createContext(): Context {
   return {
     prisma,
     select: {},
+    pubsub,
   }
 }
